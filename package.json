@@ -1,0 +1,10 @@
+{
+  "name": "node-jolokia",
+  "description": "Jolokia JS Lib Port for Node.js",
+  "author": "Keyang Xiang <keyang.xiang@gmail.com>",
+  "main":"jolokia.js",
+  "version":"0.1.0",
+  "dependencies": {
+    "jsdom": "^1.0.3"
+  }
+}
