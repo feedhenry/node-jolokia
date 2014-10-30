@@ -28,6 +28,28 @@ jolokia("http://localhost:8181/jolokia",function(err,client){
           // response error handling
         }
       });
+
+      //get attribute:
+      client.getAttribute("org.apache.zookeeper:name0=StandaloneServer_port-1,name1=InMemoryDataTree", "WatchCount",{
+        success:function(){},
+        error:function(){}
+      });
+
+      //set attribute:
+      client.setAttribute(mBean,attribute, value, path, opt);
+
+      //execute an operation:
+      client.execute(mbean, operation, arg1,arg2..., opt);
+
+      //search for mbeans
+      client.search(mBeanPattern, opt);
+
+      //list meta info
+      client.list(path, opt);
+
+      //version
+      client.version(opt);
+
     }
 });
 ```
